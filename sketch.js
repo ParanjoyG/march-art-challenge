@@ -32,7 +32,7 @@ function epiCycles(x, y, rotation, fourier) {
     stroke(255, 100);
     noFill();
     ellipse(prevx, prevy, radius * 2);
-    stroke(255);
+    stroke(255, 150);
     line(prevx, prevy, x, y);
   }
   return createVector(x, y);
@@ -45,10 +45,12 @@ function draw() {
   let vy = epiCycles(100, height / 2 + 100, HALF_PI, fourierY);
   let v = createVector(vx.x, vy.y);
   path.unshift(v);
+  stroke(255,150);
   line(vx.x, vx.y, v.x, v.y);
   line(vy.x, vy.y, v.x, v.y);
 
   beginShape();
+  stroke(255);
   noFill();
   for (let i = 0; i < path.length; i++) {
     vertex(path[i].x, path[i].y);
