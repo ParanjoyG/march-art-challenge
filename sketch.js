@@ -7,7 +7,7 @@ let path = [];
 
 function setup() {
   createCanvas(1300, 750);
-  const skip = 5;
+  const skip = 3;
   for (let i = 0; i < drawing.length; i += skip) {
     x.push(drawing[i].x);
     y.push(drawing[i].y);
